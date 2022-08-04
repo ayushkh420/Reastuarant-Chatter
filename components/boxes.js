@@ -1,6 +1,6 @@
 import React from 'react';
 import {StyleSheet,Button,TouchableOpacity, Text, View, ImageBackground} from 'react-native';
-// import { Button } from "@rneui/themed";
+
 
 const image = { uri: "https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" };
 // const Button = {(Button title='+ Invite Friend' color="#000000")}
