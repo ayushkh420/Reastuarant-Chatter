@@ -1,33 +1,19 @@
-import React, {useState} from 'react';
-import {
-  StyleSheet,
-  View,
-  Text,
-  Dimensions,
-  Image,
-  Button,
-  ImageBackground,
-  ScrollView,
-} from 'react-native';
-import MiddleSection from './components/middleSection';
-import Boxes from './components/boxes';
-import Header from './components/header';
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Home from './screens/Home'
+import Chatroom from './screens/Chatroom'
 
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <ScrollView>
-    <View style={styles.container}>
-      <Header/>
-      <MiddleSection/>
-      <Boxes/>
-    </View>
-    </ScrollView>
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={Home} />
+        <Tab.Screen name="Chatroom" component={Chatroom} />
+      </Tab.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
-});
