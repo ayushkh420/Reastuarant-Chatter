@@ -1,22 +1,20 @@
 import React from 'react';
-import { SafeAreaView } from 'react-native';
-import {StyleSheet, Text,Image, View} from 'react-native';
+import {StyleSheet, Text,Image, View,SafeAreaView} from 'react-native';
 
-export default function Home() {
+export default function Detail() {
   return (
     <SafeAreaView>
     <View style={styles.MiddleSection}>
       <Text style={styles.text}>
-        Welcome to the Ohi !!
+        Details page!!
       </Text>
-      <Text style={styles.textbootom}>Let's get connected</Text>
-      <Image
+      {/* <Text style={styles.textbootom}>Let's get connected</Text> */}
+      {/* <Image
 			style ={styles.img}
 			source={{ uri : "https://img.freepik.com/premium-vector/people-cozy-cafe-coffee-shop-interior-customers-waitress-vector-illustration_169479-422.jpg?w=1060"}}
-		/>
+		/> */}
     </View>
     </SafeAreaView>
-
   );
 }
 
@@ -48,6 +46,6 @@ const styles = StyleSheet.create({
   img:{
     position: 'relative',
     width: "95%",
-    height:"80%",
+    height:"80%"
   }
 });
