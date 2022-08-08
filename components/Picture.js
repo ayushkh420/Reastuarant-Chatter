@@ -3,18 +3,20 @@ import {
   StyleSheet,
   Button,
   TouchableOpacity,
+  TextInput,
   SafeAreaView,
   ScrollView,
   Text,
   View,
   ImageBackground,
+  Linking
 } from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const image = {
   uri: 'https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80',
 };
-// const Button = {(Button title='+ Invite Friend' color="#000000")}
+
 
 export default function Boxes() {
   return (
@@ -39,7 +41,7 @@ export default function Boxes() {
           <Text style={styles.text3}>Foodie{'\n'}<Text style={styles.text4}>Male</Text></Text>
           <Text style={styles.text5}> 4{'\n'} Friends</Text>
         </View>
-        <Text style={styles.text4}> o hi user since: Feb 05,2022</Text>
+        <Text style={styles.text4}>  O hi user since: Feb 05,2022</Text>
         <Text style={styles.text}>
           <FontAwesome5
             style={styles.font}
@@ -47,7 +49,7 @@ export default function Boxes() {
             size={15}
             color="black"
           />{' '}
-          Jaipur{' '}
+          Jaipur                {' '}
           <Text style={styles.text}>
             {' '}
             <FontAwesome5
@@ -68,6 +70,30 @@ export default function Boxes() {
           />{' '}
           B.Tech Manipal University Jaipur
         </Text>
+        <Text  style={{fontSize:18,marginTop:20,paddingLeft:10,color: '#4d88ff'}} onPress={() => {
+              Linking.openURL('https://www.instagram.com/ayush_222/');
+            }}>
+          <FontAwesome5
+            style={styles.font}
+            name={'instagram'}
+            size={20}
+            color="black"
+          />{' '}
+          ayush_222...
+        </Text>
+        <Text  style={{fontSize:18,marginTop:20,paddingLeft:10,color: '#4d88ff'}} onPress={() => {
+              Linking.openURL('https://www.linkedin.com/in/ayush-khandelwal-621920108/');
+            }}>
+          <FontAwesome5
+            style={styles.font}
+            name={'linkedin'}
+            size={20}
+            color="black"
+            
+          />{' '}
+          ayushkhandelwal
+        </Text>
+        
       </SafeAreaView>
     </ScrollView>
   );
@@ -120,8 +146,9 @@ const styles = StyleSheet.create({
     color: 'red',
     position: 'relative',
     // right:30,
+    fontWeight: 'bold',
     textAlign: 'center',
-    left:200
+    left:200,
   },
   font: {
     position: 'relative',
