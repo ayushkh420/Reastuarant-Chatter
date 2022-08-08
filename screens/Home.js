@@ -49,5 +49,6 @@ const styles = StyleSheet.create({
     position: 'relative',
     width: "95%",
     height:"80%",
+    borderRadius:30,
   }
 });

@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet,Button,TouchableOpacity, Text, View, ImageBackground} from 'react-native';
+import {StyleSheet,Button,TouchableOpacity,SafeAreaView, Text, View, ImageBackground} from 'react-native';
 
 
 const image = { uri: "https://images.unsplash.com/photo-1569096651661-820d0de8b4ab?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fGNhZmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" };
@@ -7,9 +7,10 @@ const image = { uri: "https://images.unsplash.com/photo-1569096651661-820d0de8b4
 
 export default function Boxes() {
   return (
+    <SafeAreaView  style={styles.safe}>
     <View style={styles.container}>
         <View>
-      <ImageBackground borderRadius={20} source={image} blurRadius={1.5}resizeMode="cover"style={styles.square}>
+      <ImageBackground borderRadius={20} source={image} blurRadius={2.0}resizeMode="cover"style={styles.square}>
         <View style={styles.inner}>
           <Text style={styles.text}>TOWN COFFEE-C SCHEME</Text>
         </View>
@@ -21,7 +22,7 @@ export default function Boxes() {
       </View>
 
       <View>
-      <ImageBackground source={image} borderRadius={20} blurRadius={1.5}resizeMode="cover"style={styles.square}>
+      <ImageBackground source={image} borderRadius={20} blurRadius={2.0}resizeMode="cover"style={styles.square}>
         <View style={styles.inner}>
           <Text style={styles.text}>CAFE-LAZY MOJO</Text>
         </View>
@@ -33,9 +34,9 @@ export default function Boxes() {
       </View>
       
       <View>
-      <ImageBackground source={image} borderRadius={20}  blurRadius={1.5} resizeMode="cover"style={styles.square}>
+      <ImageBackground source={image} borderRadius={20}  blurRadius={2.0} resizeMode="cover"style={styles.square}>
         <View style={styles.inner}>
-          <Text style={styles.text}>H.O.P  HOUSE OF PEOPLE</Text>
+          <Text style={styles.text}>H.O.P            HOUSE OF PEOPLE</Text>
         </View>
       </ImageBackground>
       <TouchableOpacity
@@ -44,12 +45,18 @@ export default function Boxes() {
       </TouchableOpacity>
       </View>
     </View>
+    </SafeAreaView>
 
     
   );
 }
 
 const styles = StyleSheet.create({
+  safe:{
+    flex: 1,
+    paddingBottom:50,
+
+  },
   square: {
     // backgroundColor: '#7cb48f',
     width: 150  ,

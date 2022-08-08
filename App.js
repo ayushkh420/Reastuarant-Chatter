@@ -6,6 +6,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import Home from './screens/Home'
 import Chatroom from './screens/Chatroom'
 import Detail from './screens/Detail'
+import User from './screens/User'
 
 const Tab = createBottomTabNavigator();
 
@@ -19,6 +20,8 @@ export default function App() {
                     tabBarIcon: ({size, color}) => (<Icon name={"info"} color={color} size={size} />)}}/>
         <Tab.Screen name="Chatroom" component={Chatroom} options={{
                     tabBarIcon: ({size, color}) => (<Icon name={"comment"} color={color} size={size} />)}}/>
+        <Tab.Screen name="my profile" component={User} options={{
+                    tabBarIcon: ({size, color}) => (<Icon name={"user"} color={color} size={size} />)}}/>
       </Tab.Navigator>
     </NavigationContainer>
   );
