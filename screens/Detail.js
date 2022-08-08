@@ -8,11 +8,11 @@ export default function Detail() {
       <Text style={styles.text}>
         Details page!!
       </Text>
-      {/* <Text style={styles.textbootom}>Let's get connected</Text> */}
-      {/* <Image
+      <Text style={styles.textbootom}>O hi is an Instant Social Network, it lets you free your personality in Cafes to connect with people around keeping your comfort zone intact. Just go to a café, take out your phone Tap on app, now keep your phone aside and enjoy your food.</Text>
+      <Image
 			style ={styles.img}
-			source={{ uri : "https://img.freepik.com/premium-vector/people-cozy-cafe-coffee-shop-interior-customers-waitress-vector-illustration_169479-422.jpg?w=1060"}}
-		/> */}
+			source={{ uri : "https://www.ohiapp.com/wp-content/uploads/2022/07/20-1059x800.png"}}
+		/>
     </View>
     </SafeAreaView>
   );
@@ -46,6 +46,8 @@ const styles = StyleSheet.create({
   img:{
     position: 'relative',
     width: "95%",
-    height:"80%"
+    height:"80%",
+    resizeMode:'contain',
+
   }
 });
